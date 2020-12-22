@@ -12,19 +12,25 @@ int main(int argc, char *argv[])
 	instruction_t ops[] = {
 		{"push", _push},
 		{"pall", _pall},
+		{"nop", _nop},
 		{NULL, NULL}
 	};
-	char *opcode;
-	FILE *f1 = NULL;
+	char *opcode = NULL;
 	size_t buff_sz = 0;
-	ssize_t line_sz;
+	ssize_t line_sz = 0;
 	unsigned int line_num = 0, i = 0;
 
 	if (argc != 2)
-		return (1);
+	{
+		fprintf(stderr, "USAGE: monty file");
+		exit(EXIT_FAILURE);
+	}
 	GBB.f1 = fopen(argv[1], "r");
 	if (!GBB.f1)
+	{
+		fprintf(stderr, "Error: Can't open file %s", argv[1]);
 		exit(EXIT_FAILURE);
+	}
 	while (line_sz >= 0)
 	{
 		line_num++;
@@ -44,9 +50,10 @@ int main(int argc, char *argv[])
 	if (!ops[i].opcode)
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", line_num, opcode);
+		free_all();
 		exit(EXIT_FAILURE);
 	}
 	}
-	fclose(f1);
+	free_all();
 	return (0);
 }
