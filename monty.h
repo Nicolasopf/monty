@@ -39,9 +39,10 @@ typedef struct instruction_s
 } instruction_t;
 
 /**
- *
- *
- *
+ * struct global - Struct to free everything.
+ * @buffer: Buffer of the line.
+ * @f1: File.
+ * @stack: Head.
  */
 typedef struct global
 {
