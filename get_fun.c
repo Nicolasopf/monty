@@ -15,6 +15,10 @@ void get_fun(unsigned int line_number)
 		{"swap", _swap},
 		{"add", _add},
 		{"pop", _pop},
+		{"sub", _sub},
+		{"div", _div},
+		{"mul", _mul},
+		{"mod", _mod},
 		{NULL, NULL}
 	};
 	char *opcode;
