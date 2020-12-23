@@ -12,6 +12,7 @@ void get_fun(unsigned int line_number)
 		{"pall", _pall},
 		{"nop", _nop},
 		{"pint", _pint},
+		{"swap", _swap},
 		{NULL, NULL}
 	};
 	char *opcode;
