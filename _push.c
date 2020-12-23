@@ -3,7 +3,7 @@
 /**
  * _push - Push to the head of a linked list.
  * @stack: head pointer.
- * line_number: Num of the line.
+ * @line_number: Num of the line.
  */
 
 void _push(stack_t **stack, unsigned int line_number)
