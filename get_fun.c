@@ -10,6 +10,7 @@ void get_fun(unsigned int line_number)
 	instruction_t ops[] = {
 		{"push", _push},
 		{"pall", _pall},
+		{"nop", _nop},
 		{NULL, NULL}
 	};
 	char *opcode;
