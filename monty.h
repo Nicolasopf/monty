@@ -1,6 +1,7 @@
 #ifndef MONTY_H_
 #define MONTY_H_
 
+#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -56,5 +57,9 @@ gb GBB;
 void _push(stack_t **stack, unsigned int line_number);
 void free_all(void);
 void _pall(stack_t **stack, unsigned int line_number);
+void get_fun(unsigned int line_number);
+void _swap(stack_t **stack, unsigned int line_number);
+void _pint(stack_t **stack, unsigned int line_number);
+void _nop(stack_t **stack, unsigned int line_number);
 
 #endif /* MONTY_H */
