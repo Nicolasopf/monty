@@ -26,7 +26,7 @@ void get_fun(unsigned int line_number)
 			}
 	if (!ops[i].opcode)
 	{
-		fprintf(stderr, "L%d: unknown instruction %s\n",
+		fprintf(stderr, "L%u: unknown instruction %s\n",
 			line_number, opcode);
 		free_all();
 		exit(EXIT_FAILURE);
