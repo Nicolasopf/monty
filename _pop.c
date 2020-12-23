@@ -8,7 +8,7 @@
 
 void _pop(stack_t **stack, unsigned int line_number)
 {
-	dlistint_t *tmp = stack;
+	stack_t *tmp = *stack;
 
 	if (!*stack)
 	{
